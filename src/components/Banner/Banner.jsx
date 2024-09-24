@@ -22,7 +22,7 @@ const Banner = () => {
               majority have suffered alteration in some form
             </p>
             <div>
-              <button className="btn btn-active bg-[#FF3811] text-white font-semibold text-sm md:text-lg border-none">
+              <button className="btn btn-active bg-[#FF3811] hover:text-black text-white font-semibold text-sm md:text-lg border-none">
                 Discover More
               </button>
               <button className="btn btn-outline border-white text-sm md:text-lg text-white sm:ml-2 md:mt-2 lg:ml-3 md:ml-0">
@@ -62,7 +62,7 @@ const Banner = () => {
               majority have suffered alteration in some form
             </p>
             <div>
-              <button className="btn btn-active bg-[#FF3811] text-white font-semibold text-sm md:text-lg border-none">
+              <button className="btn btn-active bg-[#FF3811] hover:text-black text-white font-semibold text-sm md:text-lg border-none">
                 Discover More
               </button>
               <button className="btn btn-outline border-white text-sm md:text-lg text-white sm:ml-2 md:mt-2 lg:ml-3 md:ml-0">
@@ -102,7 +102,7 @@ const Banner = () => {
               majority have suffered alteration in some form
             </p>
             <div>
-              <button className="btn btn-active bg-[#FF3811] text-white font-semibold text-sm md:text-lg border-none">
+              <button className="btn btn-active bg-[#FF3811] hover:text-black text-white font-semibold text-sm md:text-lg border-none">
                 Discover More
               </button>
               <button className="btn btn-outline border-white text-sm md:text-lg text-white sm:ml-2 md:mt-2 lg:ml-3 md:ml-0">
@@ -142,7 +142,7 @@ const Banner = () => {
               majority have suffered alteration in some form
             </p>
             <div>
-              <button className="btn btn-active bg-[#FF3811] text-white font-semibold text-sm md:text-lg border-none">
+              <button className="btn btn-active bg-[#FF3811] hover:text-black text-white font-semibold text-sm md:text-lg border-none">
                 Discover More
               </button>
               <button className="btn btn-outline border-white text-sm md:text-lg text-white sm:ml-2 md:mt-2 lg:ml-3 md:ml-0">

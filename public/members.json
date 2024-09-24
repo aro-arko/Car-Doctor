@@ -1,0 +1,17 @@
+[
+  {
+    "name": "John Smith",
+    "profession": "Engine Specialist",
+    "image": "../src/assets/images/team/1.jpg"
+  },
+  {
+    "name": "Emily Johnson",
+    "profession": "Transmission Technician",
+    "image": "../src/assets/images/team/2.jpg"
+  },
+  {
+    "name": "Mike Brown",
+    "profession": "Brake System Expert",
+    "image": "../src/assets/images/team/3.jpg"
+  }
+]
