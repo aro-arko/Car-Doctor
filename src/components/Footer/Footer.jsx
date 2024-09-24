@@ -27,7 +27,7 @@ const Footer = () => {
 
         <nav className="space-y-2">
           <h6 className="text-xl font-semibold text-white">About</h6>
-          <a className="link link-hover">Home..git</a>
+          <a className="link link-hover">Home</a>
           <a className="link link-hover">Service</a>
           <a className="link link-hover">Contact</a>
         </nav>
