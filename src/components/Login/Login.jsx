@@ -50,7 +50,7 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#FF3811] text-white font-semibold h-14">
+              <button className="btn bg-[#FF3811] text-white font-semibold h-16">
                 Login
               </button>
             </div>
