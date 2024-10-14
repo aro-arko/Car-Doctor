@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 import img from "../../assets/images/login/login.svg";
 import { BiLogoFacebook, BiLogoLinkedin } from "react-icons/bi";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const { signInUser } = useContext(AuthContext);
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password);
+
+    signInUser(email, password)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .then((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row items-center justify-between lg:gap-32 gap-6">
@@ -18,7 +37,10 @@ const Login = () => {
         </div>
         {/* Form Section */}
         <div className="card w-full max-w-md shrink-0">
-          <form className="card-body border border-[#D0D0D0] rounded-lg p-12">
+          <form
+            onSubmit={handleLogin}
+            className="card-body border border-[#D0D0D0] rounded-lg p-12"
+          >
             <h3 className="text-2xl lg:text-3xl font-bold text-center mb-8">
               Login
             </h3>
@@ -30,6 +52,7 @@ const Login = () => {
                 type="email"
                 placeholder="Your email"
                 className="input input-bordered h-14"
+                name="email"
                 required
               />
             </div>
@@ -41,6 +64,7 @@ const Login = () => {
                 type="password"
                 placeholder="Your password"
                 className="input input-bordered h-14"
+                name="password"
                 required
               />
               <label className="label">
