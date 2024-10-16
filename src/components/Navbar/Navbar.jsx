@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  // signout button click
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {
+        // signout successful
+      })
+      .catch((error) => console.error(error));
+  };
   const navItems = (
     <>
       <li>
@@ -57,8 +68,22 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex items-center">
         <ul className="menu menu-horizontal px-1 text-base">{navItems}</ul>
       </div>
-      <div className="navbar-end flex items-center">
-        <a className="btn text-base">Button</a>
+      <div className="navbar-end flex items-center ">
+        {user ? (
+          <button
+            onClick={handleSignOut}
+            className="btn btn-outline border-[#FF3811] bg-none text-[#FF3811] font-semibold w-auto border-2 text-base"
+          >
+            Sign Out
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className="btn btn-outline border-[#FF3811] bg-none text-[#FF3811] font-semibold w-auto border-2 text-base"
+          >
+            Log In
+          </Link>
+        )}
       </div>
     </div>
   );
