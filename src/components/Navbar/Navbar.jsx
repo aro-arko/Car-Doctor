@@ -31,6 +31,7 @@ const Navbar = () => {
       <li>
         <Link to="/contact">Contact</Link>
       </li>
+      <li>{user ? <Link to="/bookings">Bookings</Link> : ""}</li>
     </>
   );
   return (

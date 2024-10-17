@@ -5,7 +5,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const CheckOut = () => {
-  const { _id, title, price } = useLoaderData();
+  const { _id, title, price, img } = useLoaderData();
 
   const { user } = useContext(AuthContext);
 
@@ -29,6 +29,7 @@ const CheckOut = () => {
       customer_id: _id,
       price,
       message,
+      img,
     };
 
     fetch("http://localhost:5000/checkouts", {
