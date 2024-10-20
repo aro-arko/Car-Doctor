@@ -1,14 +1,17 @@
 import React from "react";
 
-const BookingTable = ({ booking, handleDelete }) => {
-  const { _id, service, img, price, f_name, l_name } = booking;
+const BookingTable = ({ booking, handleDelete, handleBookingConfirm }) => {
+  const { _id, service, img, price, f_name, l_name, status } = booking;
   console.log(booking);
   const name = f_name + " " + l_name;
 
   return (
     <tr>
       <th>
-        <button onClick={() => handleDelete(_id)} className="btn btn-square">
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-square bg-gray-300"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -44,7 +47,16 @@ const BookingTable = ({ booking, handleDelete }) => {
       <td>{service}</td>
       <td>{price}</td>
       <th>
-        <button className="btn btn-ghost btn-xs">Details</button>
+        {status === "confirmed" ? (
+          <span>Confimed</span>
+        ) : (
+          <button
+            onClick={() => handleBookingConfirm(_id)}
+            className="btn bg-gray-300 btn-xs"
+          >
+            Confirm
+          </button>
+        )}
       </th>
     </tr>
   );

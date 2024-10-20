@@ -109,8 +109,9 @@ const CheckOut = () => {
                     name="email"
                     type="email"
                     placeholder="Your Email"
-                    defaultValue={user?.email || ""}
+                    defaultValue={user.email}
                     className="input input-bordered"
+                    readOnly
                     required
                   />
                 </div>
